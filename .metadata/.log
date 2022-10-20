@@ -1546,3 +1546,32 @@ org.eclipse.core.runtime.OperationCanceledException
 	at org.sonarlint.eclipse.core.internal.jobs.AbstractAnalyzeProjectJob.doRun(AbstractAnalyzeProjectJob.java:132)
 	at org.sonarlint.eclipse.core.internal.jobs.AbstractSonarProjectJob.run(AbstractSonarProjectJob.java:45)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.core.ui 4 0 2022-10-15 23:18:25.194
+!MESSAGE Failed to create project.
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.RuntimeException: Process exit value was 1073807364
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at org.eclipse.m2e.core.ui.internal.archetype.ArchetypeGenerator.createArchetypeProjects(ArchetypeGenerator.java:125)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizard$3.doCreateMavenProjects(MavenProjectWizard.java:246)
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectJob$1.doCreateMavenProjects(AbstractCreateMavenProjectJob.java:51)
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectsOperation.run(AbstractCreateMavenProjectsOperation.java:57)
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectJob.runInWorkspace(AbstractCreateMavenProjectJob.java:55)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: Process exit value was 1073807364
+	at org.eclipse.m2e.internal.launch.EclipseMavenLauncher$1.lambda$1(EclipseMavenLauncher.java:97)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.eclipse.m2e.internal.launch.EclipseMavenLauncher$1.launchesTerminated(EclipseMavenLauncher.java:91)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1057)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.debug.core.Launch.handleDebugEvents(Launch.java:644)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1226)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1260)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:492)
+	... 1 more
