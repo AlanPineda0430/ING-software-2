@@ -36,41 +36,42 @@ public final class PersonDTO {
 		setCompleteName(completeName);
 	}
 	public final String getId() {
-		if (id== null || "" .equals(id.trim())) {
+		if (id== null)  {
 			setId("");
 		}
-		return id;
+		return id.trim();
 	}
 	public final String getIdCard() {
-		if (idCard== null || "" .equals(idCard.trim())) {
+		if (idCard== null ) {
 			setIdCard("");
 		}
-		return idCard;
+		return idCard.trim();
 	}
 	public final String getFirstName() {
-		if (firstName== null || "" .equals(firstName.trim())) {
+		if (firstName== null ) {
 			setFirstName("");
 		}
-		return firstName;
+		return firstName.trim();
 	}
 	public final String getMiddleName() {
-		if (middleName== null || "" .equals(middleName.trim())) {
+		if (middleName== null ) {
 			setMiddleName("");
 		}
-		return middleName;
+		return middleName.trim();
 	}
 	public final String getFirstSurname() {
-		if (firstSurname== null || "" .equals(firstSurname.trim())) {
+		if (firstSurname== null ) {
 			setFirstSurname("");
 		}
-		return firstSurname;
+		return firstSurname.trim();
 	}
 	public final String getSecondSurname() {
-		if (secondSurname== null || "" .equals(secondSurname.trim())) {
+		if (secondSurname== null) {
 			setSecondSurname("");
 		}
-		return secondSurname;
+		return secondSurname.trim();
 	}
+	
 	public final void setId(final String id) {
 		this.id = id;
 	}
@@ -96,18 +97,24 @@ public final class PersonDTO {
 		return name.trim();
 	}
 	public final String getLastName() {
-		return lastName;
+		if (lastName== null) {
+			setLastName("");
+		}
+		return lastName.trim();
 	}
 	public final String getCompleteName() {
-		return completeName;
+		if (completeName== null ) {
+			setCompleteName("");
+		}
+		return completeName.trim();
 	}
-	public void setName(String name) {
+	public final void setName(final String name) {
 		this.name = name;
 	}
-	public void setLastName(String lastName) {
+	public final void setLastName(final String lastName) {
 		this.lastName = lastName;
 	}
-	public void setCompleteName(String completeName) {
+	public final void setCompleteName(final String completeName) {
 		this.completeName = completeName;
 	}
 
