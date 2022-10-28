@@ -28,9 +28,5 @@
 			<artifactId>PersonalBudget_Entities</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency></dependency>
 	</dependencies>
-	<properties>
-		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-	</properties>
 </project>

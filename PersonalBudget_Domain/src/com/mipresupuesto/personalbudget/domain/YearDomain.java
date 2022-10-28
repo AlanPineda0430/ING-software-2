@@ -8,6 +8,7 @@ public final class YearDomain {
 	
 	private UUID id;
 	private int year;
+	   
 	
 	private YearDomain(UUID id, int year) {
 		setId(id);

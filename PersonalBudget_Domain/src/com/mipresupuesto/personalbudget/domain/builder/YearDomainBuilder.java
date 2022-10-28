@@ -5,14 +5,10 @@ import java.util.UUID;
 import com.mipresupuesto.personalbudget.crosscutting.UtilUUID;
 import com.mipresupuesto.personalbudget.domain.YearDomain;
 
-/**
- * @author ksmp1
- *
- */
 public class YearDomainBuilder {
 	
 	private UUID id;
-	private int year;
+	private int year; 
 	
 	private YearDomainBuilder() {
 		setId(UtilUUID.DEFAULT_UUID);

@@ -5,7 +5,8 @@ public final class YearDTO {
 	private int year;
 	
 	public YearDTO() {
-		
+		setId("");
+		setYear(0);
 	}
 	
 	public YearDTO(String id, int year) {
@@ -17,26 +18,27 @@ public final class YearDTO {
 		return new YearDTO();
 	}
 
-	private final void setId(String id) {
+	private final void setId(final String id) {
 		this.id = id;
 	}
 
-	private final void setYear(int year) {
+	private final void setYear(final int year) {
 		this.year = year;
 	}
-
-	public final String getId() {
-		if (id== null) {
-			setId("");
-		}
-		return id.trim();
-	}
-
+	
 	public final int getYear() {
 		return year;
 	}
-	
 
+	public final String getId() {
+		if (id== null || "" .equals(id.trim())) {
+			setId("");
+		}
+		return id;	
+	}
+
+	
+	
 }
 
 
