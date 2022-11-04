@@ -1,4 +1,4 @@
-package com.mipresupuesto.personalbudget.domain;
+ package com.mipresupuesto.personalbudget.domain;
 
 import java.util.UUID;
 

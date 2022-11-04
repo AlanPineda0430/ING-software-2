@@ -21,6 +21,9 @@ public final class PersonDTO {
 		setMiddleName("");
 		setFirstSurname("");
 		setSecondSurname("");
+		setName("");
+		setLastName("");
+		
 	}
 	
 	public PersonDTO(final String id, final String idCard, final String firstName, final String middleName,
