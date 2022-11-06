@@ -26,10 +26,10 @@ public class PersonDomain {
 		
 	}
 	private void setId(UUID id) {
-		this.id = (id==null) ? UUID.randomUUID(): id;
+		this.id = (id==null) ? UtilUUID.DEFAULT_UUID: id;
 	}
 	private void setIdCard(String idCard) {
-		this.idCard = (idCard == null) ? PersonDomainBuilder.get(): idCard;
+		this.idCard = (idCard == null) ? "": idCard;
 	}
 	private void setFirstName(String firstName) {
 		this.firstName = firstName;

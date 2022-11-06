@@ -19,7 +19,7 @@ public final class YearDomain {
 	}
 	
 	private final void setId(UUID id) {
-		this.id=(id==null) ? UtilUUID.DEFAULT_UUID : id;
+		this.id=(id==null) ? UtilUUID.DEFAULT_UUID: id;
 	}
 
 	private final void setYear(int year) {
@@ -32,7 +32,5 @@ public final class YearDomain {
 	public int getYear() {
 		return year;
 	}
-	
-	
 
 }

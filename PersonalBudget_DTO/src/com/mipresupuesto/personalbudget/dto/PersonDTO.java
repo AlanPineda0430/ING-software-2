@@ -23,9 +23,11 @@ public final class PersonDTO {
 		setSecondSurname("");
 		setName("");
 		setLastName("");
+		setCompleteName("");
 		
 	}
 	
+	@SuppressWarnings("all")
 	public PersonDTO(final String id, final String idCard, final String firstName, final String middleName,
 			final String firstSurname, final String secondSurname, final String name, final String lastName, final String completeName) {
 		setId(id);

@@ -19,7 +19,7 @@ import com.mipresupuesto.personalbudget.dto.BudgetDTO;
 public class BudgetController {
 	
 		@Autowired
-	private CreateBudgetPort createBudgetPort;
+	private reateBudgetPort createBudgetPort;
 	
 	
 	@PostMapping
